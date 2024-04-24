@@ -49,5 +49,12 @@ public class ProductRepositoryImpl extends EntityManagerRepository implements IP
 		/* could have a different update approach tho */
 		return executetransactionedMerge(product);
 	}
+
+	@Override
+	public List<Product> findAllProducts() {
+		TypedQuery<Product> selectProductQuery = 
+				entityManager.createQuery("FROM Product", Product.class);
+		return selectProductQuery.getResultList();
+	}
 	
 } 

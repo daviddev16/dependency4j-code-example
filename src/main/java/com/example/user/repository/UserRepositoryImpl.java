@@ -1,5 +1,6 @@
 package com.example.user.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.NoResultException;
@@ -15,12 +16,10 @@ public class UserRepositoryImpl extends EntityManagerRepository implements IUser
 
 	@Override
 	public Optional<User> findUserByLogin(String login) {
-		
 		TypedQuery<User> selectUserQuery = 
 				entityManager.createNamedQuery("User_FindByLogin", User.class);
 		
 		selectUserQuery.setParameter("paramLogin", login);
-		
 		try {
 			return Optional.of(selectUserQuery.getSingleResult());
 		} catch (NoResultException e) {
@@ -31,6 +30,14 @@ public class UserRepositoryImpl extends EntityManagerRepository implements IUser
 	@Override
 	public User createUser(User user) {
 		return executetransactionedMerge(user);
+	}
+
+	@Override
+	public List<User> findAllUsers() {
+		TypedQuery<User> selectUserQuery = 
+				entityManager.createQuery("From User", User.class);
+		return selectUserQuery.getResultList();
+		
 	}
 	
 } 

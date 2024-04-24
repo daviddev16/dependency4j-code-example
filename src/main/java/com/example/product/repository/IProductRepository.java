@@ -13,6 +13,8 @@ public interface IProductRepository {
 	
 	List<Product> findProductsByName(String name);
 	
+	List<Product> findAllProducts();
+	
 	Product retrieveProductFromPaginator(Paginator<Product> paginator);
 	
 	long countProducts();

@@ -1,5 +1,7 @@
 package com.example.user.service;
 
+import java.util.List;
+
 import com.example.core.Encoder;
 import com.example.core.exception.ServiceException;
 import com.example.user.User;
@@ -41,6 +43,10 @@ public class UserService {
 		return userRepository
 				.findUserByLogin(login)
 				.orElseThrow(() -> new ServiceException("\"%s\" user could not be found.".formatted(login)));
+	}
+	
+	public List<User> findAllUsers() {
+		return userRepository.findAllUsers();
 	}
 	
 	public User createUser(String login, String password) {

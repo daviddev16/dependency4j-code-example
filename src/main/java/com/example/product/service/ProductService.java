@@ -36,4 +36,8 @@ public class ProductService {
 		throw new ServiceException("The name field was not filled.");
 	}
 	
+	public List<Product> findAllProducts() {
+		return productRepository.findAllProducts();
+	}
+	
 }

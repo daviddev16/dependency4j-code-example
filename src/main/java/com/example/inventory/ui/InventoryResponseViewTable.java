@@ -71,9 +71,9 @@ public class InventoryResponseViewTable extends JTable implements TableCellRende
 		getTableHeader().setReorderingAllowed(false);
 		
 		setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		setCellSelectionEnabled(true);
+		//setCellSelectionEnabled(true);
 		setRowSelectionAllowed(true);	
-		setShowVerticalLines(false);
+		setShowVerticalLines(true);
 		
 		tableModel.setColumnIdentifiers(columnIdentifiers);
 		setDefaultRenderer(Object.class, this);
