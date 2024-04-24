@@ -20,7 +20,7 @@ up configuration classes. The project also uses **SQLite** to store and data req
 for window building and design, **FlatLaf** library for theming and UI design, **Hibernate** to connect and interact
 with the database and some other additional libraries such as **Lombok**, **JGoodies Forms** and **JDatePicker**. 
 
-# Images
+## Images
 
 <p align="center">
   <img src="https://i.imgur.com/mfwvFsD.png"/>
