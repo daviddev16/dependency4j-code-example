@@ -12,15 +12,19 @@ This is a small inventory system project. You can manage products (view, add and
 input or output, contains a simple authentication service, you can filter, visualize data and summaries.
 It works with an Entity-Model, Service, Repository architecture with a nice Java UI design :)
 
+## Architecture and Components
+
+The application follows a DDD (Domain Driven Design) architecture, uses **Dependency4j** to manage all repositories, 
+services classes for their specific entities with instatiation/creation of dynamic and injectable classes and setting 
+up configuration classes. The project also uses **SQLite** to store and data required to work locally, **Java Swing** 
+for window building and design, **FlatLaf** library for theming and UI design, **Hibernate** to connect and interact
+with the database and some other additional libraries such as **Lombok**, **JGoodies Forms** and **JDatePicker**. 
+
+# Images
+
 <p align="center">
   <img src="https://i.imgur.com/mfwvFsD.png"/>
 </p>
-
-## Architecture and Components
-
-The application follows a DDD (Domain Driven Design) architecture, uses **Dependency4j** to manage all repositories and 
-services classes for their specific entities with instatiation/creation of dynamic and injectable classes. The project also 
-uses **SQLite** to store and data required to work locally, **Java Swing** for window building and design, **FlatLaf** library for 
-theming and UI design, **Hibernate** to connect and interact with the database and some additional libraries such as **Lombok**,
-**JGoodies Forms** and **JDatePicker**. 
-
+<p align="center">
+  <img src="https://i.imgur.com/QY8mu0Q.png"/>
+</p>
