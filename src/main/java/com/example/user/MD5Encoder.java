@@ -6,20 +6,17 @@ import java.security.NoSuchAlgorithmException;
 
 import com.example.core.Encoder;
 import com.example.core.exception.ServiceException;
-
-import io.github.dependency4j.Managed;
 import io.github.dependency4j.util.Checks;
 
-@Managed
-public class MD5EncoderService implements Encoder {
+public class MD5Encoder implements Encoder {
 
 	private MessageDigest messageDigest;
 
-	public MD5EncoderService() {
+	public MD5Encoder() {
 		try {
 			messageDigest = MessageDigest.getInstance("MD5");
 		} catch (NoSuchAlgorithmException e) {
-			throw new ServiceException("Failed to initialize MD5EncoderService.", e);
+			throw new ServiceException("Failed to initialize MD5Encoder.", e);
 		}
 	}
 

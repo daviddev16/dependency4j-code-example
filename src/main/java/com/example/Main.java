@@ -1,6 +1,5 @@
 package com.example;
 
-
 import java.awt.Toolkit;
 import java.io.File;
 import java.util.concurrent.CountDownLatch;

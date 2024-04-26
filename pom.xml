@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>io.github.dependency4j</groupId>
 			<artifactId>dependency4j</artifactId>
-			<version>1.0.3</version>
+			<version>1.0.41</version>
 		</dependency>
 
 		<dependency>
