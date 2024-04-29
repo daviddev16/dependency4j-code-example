@@ -13,6 +13,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 
 import io.github.dependency4j.DependencyManager;
 import io.github.dependency4j.InstallationType;
+import io.github.dependency4j.util.D4JUtil;
 
 public class Main {
 
@@ -23,6 +24,7 @@ public class Main {
 		/* setup dependency manager installation */
 		final DependencyManager dependencyManager = DependencyManager
 				.builder()
+				.includeDependencyManagerAsDependency()
 				.installPackage("com.example")
 				.getDependencyManager();
 		
@@ -30,9 +32,6 @@ public class Main {
 		dependencyManager
 			.query(EntityBasicSetup.class)
 			.setupBasicEntities();
-		
-		/* self installation enables to inject DependencyManager on Managed classes  */
-		dependencyManager.includeDependencyManagerAsDependency();
 		
 		/* release application frame thread */
 		latch.countDown();
@@ -53,6 +52,8 @@ public class Main {
 				
 				SwingUtil.displayOnCenter(frameUserLogin);
 				frameUserLogin = null;
+				
+				D4JUtil.printDependencySearchTree(dependencyManager.getDependencySearchTree());
 				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
