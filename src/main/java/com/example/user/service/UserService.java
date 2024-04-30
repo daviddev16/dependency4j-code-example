@@ -25,7 +25,7 @@ public class UserService {
 		this.userRepository = userRepository;
 	}
 	
-	public synchronized boolean authenticateUser(String login, String password) {
+	public boolean authenticateUser(String login, String password) {
 		
 		User loggedUser = findUserByLogin(login);
 		

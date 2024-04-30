@@ -11,7 +11,7 @@ import io.github.dependency4j.Virtual;
 public class SecurityConfig {
 
 	@Virtual
-	public Encoder md5Enconder( DependencyManager dependencyManager ) {
+	public Encoder md5Encoder( DependencyManager dependencyManager ) {
 		return dependencyManager.installType(MD5Encoder.class);
 	}
 

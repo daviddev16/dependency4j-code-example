@@ -13,7 +13,6 @@ import com.formdev.flatlaf.FlatLightLaf;
 
 import io.github.dependency4j.DependencyManager;
 import io.github.dependency4j.InstallationType;
-import io.github.dependency4j.util.D4JUtil;
 
 public class Main {
 
@@ -52,8 +51,6 @@ public class Main {
 				
 				SwingUtil.displayOnCenter(frameUserLogin);
 				frameUserLogin = null;
-				
-				D4JUtil.printDependencySearchTree(dependencyManager.getDependencySearchTree());
 				
 			} catch (InterruptedException e) {
 				e.printStackTrace();
